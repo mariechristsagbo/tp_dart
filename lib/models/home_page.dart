@@ -43,15 +43,18 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start, // Alignement des widgets enfants à gauche
                   children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Column(
-                              children: [
-                                Image.asset('assets/images/republic.png',
-                                width: 70,
-                                  height: 70,
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Image.asset('assets/images/republic.png',
+                                  width: 70,
+                                    height: 70,
+                                  ),
+                                ],
+                              ),
                             ),
                             Row(
                               children: [
@@ -73,43 +76,42 @@ class HomePage extends StatelessWidget {
                             )
                           ],
                         ),
-                        Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
 
                         Padding(
-                          padding: const EdgeInsets.all(40.0),
+                          padding: const EdgeInsets.only(top:30, left: 12),
                           child: Row(
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Column(
-                                    children: [
-                                      Text ('Le vote est un devoir',
-                                          style: TextStyle (fontWeight: FontWeight.bold,
-                                              fontSize: 18)
-                                      ),
-                                    ],
+                                                children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Le vote est un devoir en ligne',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
                                   ),
-                                  Text ('Chaque citon',
-                                      style: TextStyle (
-                                          fontWeight: FontWeight.w300
-                                      )),
-                                ],
-                              )
-                            ],
+                                ),
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                Text(
+                                  'Chaque citoyen a le droit de prendre part à la vie politique en général.',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
+                          Icon(
+                            Icons.how_to_vote,
+                            color: Colors.teal[800],
+                            size: 120,
+                          ),
+                                                ],
+                                              ),
                         ),
-
-                        Column(
-                          children: [
-                            Icon(Icons.how_to_vote, size: 80, color: Colors.teal,),
-                          ],
-                        ),
-
-                      ],
-                    ),
 
                   ],
                 ),
