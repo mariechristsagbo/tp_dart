@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(2.0),
               child: Center(
                 child: Text(
                   'Inscrivez-vous',
