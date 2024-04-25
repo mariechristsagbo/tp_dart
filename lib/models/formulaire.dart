@@ -9,6 +9,8 @@ class _LoginPageState extends State<LoginPage> {
   /*String email;
   String password;*/
   bool acceptTerms = false;
+  String _radioValue = ('');
+
 
   @override
   Widget build(BuildContext context) {
@@ -110,18 +112,62 @@ class _LoginPageState extends State<LoginPage> {
 
               },
             ),
+
+
             SizedBox(height: 20),
+
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Votre sexe',
+                    style: TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold,
+                    fontSize: 18),
+                  ),
+                ),
+                Row(
+                  children: <Widget>[
+                    Radio(
+                      value: 'M',
+                      groupValue: _radioValue,
+                      onChanged: (value) {
+                        setState(() {
+                          _radioValue = value.toString();
+                        });
+                      },
+                      activeColor: Colors.teal[800],
+                    ),
+                    Text('M', style: TextStyle(fontFamily: 'Montserrat')),
+                    Radio(
+                      value: 'F',
+                      groupValue: _radioValue,
+                      onChanged: (value) {
+                        setState(() {
+                          _radioValue = value.toString();
+                        });
+                      },
+                      activeColor: Colors.teal[800],
+                    ),
+                    Text('F', style: TextStyle(fontFamily: 'Montserrat')),
+                  ],
+                ),
+              ],
+            ),
+
             Row(
               children: <Widget>[
                 Checkbox(
-                  value: acceptTerms ?? false, // Utilisation de l'opérateur ?? pour fournir une valeur par défaut si acceptTerms est null
+                  value: acceptTerms ?? false,
                   onChanged: (value) {
                     setState(() {
-                      acceptTerms = value ?? false; // Conversion explicite de value de bool? à bool
+                      acceptTerms = value ?? false;
                     });
                   },
                   activeColor: Colors.teal[800],
                 ),
+
 
 
                 Text('Accepter les conditions d\'utilisations',
