@@ -76,12 +76,14 @@ class HomePage extends StatelessWidget {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
+                                fontFamily: 'Montserrat'
                               ),
                             ),
                             Text(
                               'La démocratie transparente',
                               style: TextStyle(
                                 fontWeight: FontWeight.w300,
+                                fontFamily: 'Montserrat'
                               ),
                             ),
                           ],
@@ -100,6 +102,7 @@ class HomePage extends StatelessWidget {
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 25,
+                                  fontFamily: 'Montserrat',
                                 ),
                               ),
                               SizedBox(height: 8),
@@ -107,6 +110,7 @@ class HomePage extends StatelessWidget {
                                 'Chaque citoyen a le droit de prendre part à la vie politique en général.',
                                 style: TextStyle(
                                   fontSize: 15,
+                                  fontFamily: 'Montserrat'
                                 ),
                               ),
                             ],
@@ -139,6 +143,7 @@ class HomePage extends StatelessWidget {
             'Continuer avec son NPI',
             style: TextStyle(
               fontWeight: FontWeight.w500,
+              fontFamily: 'Montserrat'
             ),
           ),
         ),
