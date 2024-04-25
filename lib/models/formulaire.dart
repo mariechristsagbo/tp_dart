@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
 
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+        padding: EdgeInsets.symmetric(vertical: 25, horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
